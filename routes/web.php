@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Praktikum1
 Route::get('/hello', function () {
     return 'Hello World';
 });
@@ -33,6 +34,7 @@ Route::get('/about', function () {
     return view('about');
 });
 
+//Praktikum2
 Route::get('/user/{echa}', function ($echa) {
     return 'Nama saya '.$echa;
     });
@@ -46,3 +48,11 @@ Route::get('/articles/{id}', function ($Id){
     return 'Halaman Artikel dengan ID: '.$Id;
 });
 
+//Praktikum3
+Route::get('/user/{name?}', function ($name=null) {
+    return 'Nama saya '.$name;
+});
+
+Route::get('/user/{name?}', function ($name='John') {
+    return 'Nama saya '.$name;
+});
