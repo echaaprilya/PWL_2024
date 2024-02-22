@@ -32,3 +32,17 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about');
 });
+
+Route::get('/user/{echa}', function ($echa) {
+    return 'Nama saya '.$echa;
+    });
+
+Route::get('/posts/{post}/comments/{comment}', function
+    ($postId, $commentId) {
+    return 'Pos ke-'.$postId." Komentar ke-: ".$commentId;
+}); 
+
+Route::get('/articles/{id}', function ($Id){
+    return 'Halaman Artikel dengan ID: '.$Id;
+});
+
